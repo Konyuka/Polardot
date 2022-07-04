@@ -19,7 +19,7 @@
           </p>
         </div>
         <div
-          class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none"
+          class="mt-12 max-w-lg mx-auto grid gap-2 lg:grid-cols-3 lg:max-w-none"
         >
           <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
             <div class="flex-1 bg-white p-6 flex flex-col justify-between">
@@ -32,8 +32,8 @@
               </div>
               <div class="flex-1">
                 <a href="#" class="block mt-2">
-                  <p class="mt-3 text-base text-black">
-                    • 3D/2D Surveying, Terrain Mapping & 3D site reconstruction.
+                  <p class="text-sm font-semibold text-gray-900 mt-3">
+                    3D/2D Surveying, Terrain Mapping & 3D site reconstruction.
                   </p></a
                 >
               </div>
@@ -42,36 +42,119 @@
 
           <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
             <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+                  alt=""
+                />
+              </div>
               <div class="flex-1">
                 <a href="#" class="block mt-2">
-                  <p class="text-xl font-semibold text-gray-900">
-                    How to use search engine optimization to drive sales
-                  </p>
-                  <p class="mt-3 text-base text-gray-500">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Velit facilis asperiores porro quaerat doloribus, eveniet
-                    dolore. Adipisci tempora aut inventore optio animi., tempore
-                    temporibus quo laudantium.
-                  </p>
-                </a>
+                  <p class="text-sm font-semibold text-gray-900 mt-3">
+                    Construction site asset management.
+                  </p></a
+                >
               </div>
             </div>
           </div>
 
           <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
             <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+                  alt=""
+                />
+              </div>
               <div class="flex-1">
                 <a href="#" class="block mt-2">
-                  <p class="text-xl font-semibold text-gray-900">
-                    Improve your customer experience
-                  </p>
-                  <p class="mt-3 text-base text-gray-500">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Sint harum rerum voluptatem quo recusandae magni placeat
-                    saepe molestiae, sed excepturi cumque corporis perferendis
-                    hic.
-                  </p>
-                </a>
+                  <p class="text-sm font-semibold text-gray-900 mt-3">
+                    Construction Building & Infrastructure deviation and issue
+                    tracking.
+                  </p></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1">
+                <a href="#" class="block mt-2">
+                  <p class="text-sm font-semibold text-gray-900 mt-3">
+                    Construction, Building & Infrastructure asset inspection and
+                    progress tracking.
+                  </p></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1">
+                <a href="#" class="block mt-2">
+                  <p class="text-sm font-semibold text-gray-900 mt-3">
+                    Earthwork estimations and stockpile volumetric analysis.
+                  </p></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1">
+                <a href="#" class="block mt-2">
+                  <p class="text-sm font-semibold text-gray-900 mt-3">
+                    Central remote monitoring and site visualization on the
+                    cloud.
+                  </p></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div></div>
+
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1">
+                <a href="#" class="block mt-2">
+                  <p class="text-sm font-semibold text-gray-900 mt-3">
+                    Transmission Line Corridor vegetation management.
+                  </p></a
+                >
               </div>
             </div>
           </div>

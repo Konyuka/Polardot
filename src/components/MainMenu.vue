@@ -5,7 +5,7 @@
         <div class="flex items-center px-2 lg:px-0">
           <div class="flex-shrink-0 mt-8 mb-8">
             <img
-              class="block lg:hidden h-8 w-auto"
+              class="block lg:hidden h-14 w-auto"
               src="@/assets/PolardotLogo.png"
               alt="Workflow"
             />
@@ -23,7 +23,7 @@
                 class="bg-polar-red text-white px-3 py-2 rounded-md text-lg font-extrabold"
                 >Home</a
               >
-              <a
+              <!-- <a
                 href="#"
                 class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-extrabold"
                 >Highlights</a
@@ -52,7 +52,7 @@
                 href="#"
                 class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-extrabold"
                 >Demo</a
-              >
+              > -->
               <a
                 href="#"
                 class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-extrabold"
@@ -62,7 +62,6 @@
           </div>
         </div>
         <div class="flex lg:hidden">
-          <!-- Mobile menu button -->
           <button
             type="button"
             class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
@@ -128,9 +127,8 @@
     </div>
 
     <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="lg:hidden" id="mobile-menu">
+    <!-- <div class="lg:hidden" id="mobile-menu">
       <div class="px-2 pt-2 pb-3 space-y-1">
-        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
         <a
           href="#"
           class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
@@ -170,7 +168,6 @@
             class="ml-auto flex-shrink-0 bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
           >
             <span class="sr-only">View notifications</span>
-            <!-- Heroicon name: outline/bell -->
             <svg
               class="h-6 w-6"
               xmlns="http://www.w3.org/2000/svg"
@@ -206,7 +203,7 @@
           >
         </div>
       </div>
-    </div>
+    </div> -->
   </nav>
 </template>
 

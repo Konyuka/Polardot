@@ -4,6 +4,8 @@
     <HeroSection />
     <HighLights />
     <UseCases />
+    <BenefitsSolutions />
+    <PatnersClients />
     <ContactUs />
   </div>
 </template>
@@ -13,6 +15,8 @@
   import HeroSection from "./components/HeroSection.vue";
   import HighLights from "./components/HighLights.vue";
   import UseCases from "./components/UseCases.vue";
+  import BenefitsSolutions from "./components/BenefitsSolutions.vue";
+  import PatnersClients from "./components/PatnersClients.vue";
   import ContactUs from "./components/ContactUs.vue";
 
   export default {
@@ -22,6 +26,8 @@
       HeroSection,
       HighLights,
       UseCases,
+      BenefitsSolutions,
+      PatnersClients,
       ContactUs,
     },
   };

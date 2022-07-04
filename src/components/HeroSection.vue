@@ -2,7 +2,13 @@
   <div>
     <!-- This example requires Tailwind CSS v2.0+ -->
     <div class="bg-white">
-      <div class="mt-10 bg-white pb-12 lg:mt-18 lg:pb-6">
+      <div class="block sm:hidden px-2 sm:px-2 lg:px-2 lg:pt-2 mt-2">
+        <div class="text-center flex justify-center">
+          <img class="" src="@/assets/pro.png" alt="" />
+        </div>
+      </div>
+
+      <div class="mt-10 bg-white pb-12 lg:mt-4 lg:pb-2">
         <div class="relative z-0">
           <div class="absolute inset-0 h-screen bg-white lg:h-5/6"></div>
           <div class="max-w-12xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -146,7 +152,7 @@
                             </svg>
                           </div>
                           <p class="ml-3 text-base font-medium text-white">
-                            3d Models
+                            3D Models
                           </p>
                         </li>
                         <li class="flex items-start">
@@ -169,7 +175,7 @@
                             </svg>
                           </div>
                           <p class="ml-3 text-base font-medium text-white">
-                            Card Design as Built Data
+                            CAD Design and as Built Data
                           </p>
                         </li>
                       </ul>
@@ -439,13 +445,25 @@
         </div>
       </div>
 
-      <div class="px-4 sm:px-4 lg:px-4 lg:pt-4">
+      <div class="hidden sm:block px-4 sm:px-4 lg:px-4 lg:pt-2">
         <div class="text-center flex justify-center">
           <img class="" src="@/assets/pro.png" alt="" />
-          <!-- <p class="text-3xl font-extrabold text-black sm:text-4xl lg:text-4xl">
-            Unlock the power location intelligence. <br />
-            Geospatial Data Inspired Decision Making.
-          </p> -->
+        </div>
+        <div class="flex justify-around">
+          <p
+            class="mt-2 text-2xl font-extrabold text-gray-900 sm:text-3xl mr-2"
+          >
+            <i class="fas fa-caret-right text-polar-red"></i>
+            <span class="text-polar-gray">
+              Unlock the power location intelligence
+            </span>
+          </p>
+          <p class="mt-2 text-2xl font-extrabold text-gray-900 sm:text-3xl">
+            <i class="fas fa-caret-right text-polar-gray"></i>
+            <span class="text-polar-red">
+              Geospatial Data Inspired Decision Making
+            </span>
+          </p>
         </div>
       </div>
     </div>

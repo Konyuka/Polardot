@@ -1,6 +1,7 @@
 <template>
   <div>
     <MainMenu />
+    <GallerySection v-if="gallery" />
     <HeroSection />
     <HighLights />
     <UseCases />
@@ -12,6 +13,7 @@
 
 <script>
   import MainMenu from "./components/MainMenu.vue";
+  import GallerySection from "./components/GallerySection.vue";
   import HeroSection from "./components/HeroSection.vue";
   import HighLights from "./components/HighLights.vue";
   import UseCases from "./components/UseCases.vue";
@@ -21,8 +23,14 @@
 
   export default {
     name: "App",
+    data() {
+      return {
+        gallery: false,
+      };
+    },
     components: {
       MainMenu,
+      GallerySection,
       HeroSection,
       HighLights,
       UseCases,

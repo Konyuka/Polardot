@@ -54,7 +54,8 @@
                 >Demo</a
               > -->
               <a
-                href="#"
+                href=""
+                @click.prevent="gallery"
                 class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-extrabold"
                 >Gallery</a
               >
@@ -212,6 +213,11 @@
     name: "HelloWorld",
     props: {
       msg: String,
+    },
+    methods: {
+      gallery() {
+        this.$parent.gallery = true;
+      },
     },
   };
 </script>

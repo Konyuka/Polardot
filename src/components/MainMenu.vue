@@ -116,7 +116,22 @@
             </svg>
           </button>
         </div>
-        <div class="hidden lg:block lg:ml-4">
+        <div class="hidden lg:flex lg:ml-4 justify-between gap-20">
+          <div class="flex gap-4">
+            <router-link to="/">Go to Home</router-link>
+            <router-link
+              to="register"
+              @click.prevent="gallery"
+              class="text-white hover:bg-polar-red hover:text-white px-3 py-2 rounded-md text-lg font-extrabold bg-polar-gray"
+              >Register</router-link
+            >
+            <router-link
+              to="login"
+              @click.prevent="gallery"
+              class="text-white hover:bg-polar-red hover:text-white px-3 py-2 rounded-md text-lg font-extrabold bg-polar-gray"
+              >Login</router-link
+            >
+          </div>
           <div class="flex items-center">
             <i class="fab fa-twitter text-white fa-2xl mr-6"></i>
             <i class="fab fa-facebook text-white fa-2xl mr-6"></i>

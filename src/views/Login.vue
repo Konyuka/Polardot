@@ -14,7 +14,7 @@
           alt="Workflow"
         />
         <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
-          Sign Up for an account
+          Sign in to your account
         </h2>
       </div>
 
@@ -26,29 +26,11 @@
                 for="email"
                 class="block text-sm font-medium text-gray-700"
               >
-                Client Name
-              </label>
-              <div class="mt-1">
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autocomplete="email"
-                  required
-                  class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label
-                for="email"
-                class="block text-sm font-medium text-gray-700"
-              >
                 Email address
               </label>
               <div class="mt-1">
                 <input
+                  v-model="email"
                   id="email"
                   name="email"
                   type="email"
@@ -68,6 +50,7 @@
               </label>
               <div class="mt-1">
                 <input
+                  v-mddel="password"
                   id="password"
                   name="password"
                   type="password"
@@ -106,6 +89,7 @@
 
             <div>
               <button
+                @click="signIn"
                 type="submit"
                 class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-polar-red hover:bg-polar-gray focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
@@ -121,12 +105,42 @@
 
 <script>
   import MainMenu from "@/components/MainMenu.vue";
+  // import firebase from "firebase";
+  // import { fb } from "@/firebase";
+  // import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+  // import { useRouter } from "@/router";
+  // import { router } from "@/router";
+  //
+  // import { router } from "vue-router";
 
   export default {
     name: "LoginPage",
     props: {},
     components: {
       MainMenu,
+    },
+    data() {
+      return {
+        email: "",
+        password: "",
+      };
+    },
+    methods: {
+      signIn() {
+        // fb.auth()
+        //   .signInWithEmailAndPassword(this.email, this.password) // THIS LINE CHANGED
+        //   .then((data) => {
+        //     console.log(data);
+        //     console.log("Successfully logged in!");
+        //     // const router = useRouter();
+        //     // router.push("/clientdash"); // redirect to the feed
+        //     this.$router.push("/clientdash");
+        //   })
+        //   .catch((error) => {
+        //     console.log(error.code);
+        //     alert(error.message);
+        //   });
+      },
     },
   };
 </script>

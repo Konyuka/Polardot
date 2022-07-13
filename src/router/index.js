@@ -17,6 +17,11 @@ const routes = [
         name: "Register",
         component: () => import('@/views/Register.vue')
     },
+    {
+        path: "/clientdash",
+        name: "ClientDash",
+        component: () => import('@/views/ClientDash.vue')
+    },
 ];
 
 const router = createRouter({

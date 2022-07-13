@@ -1,12 +1,11 @@
 <template>
-  <div>client Dash</div>
+  <DashLayout>
+    <div>client Dash</div>
+  </DashLayout>
 </template>
 
-<script>
-  export default {
-    name: "ClientDash",
-    props: {},
-  };
+<script setup>
+  import DashLayout from "@/layouts/DashLayout.vue";
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

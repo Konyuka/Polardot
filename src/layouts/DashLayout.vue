@@ -224,11 +224,11 @@
       <!-- Static sidebar for desktop -->
       <div class="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
         <!-- Sidebar component, swap this element with another sidebar if you like -->
-        <div class="flex flex-col flex-grow pt-5 bg-indigo-700 overflow-y-auto">
-          <div class="flex items-center flex-shrink-0 px-4">
+        <div class="flex flex-col flex-grow pt-5 bg-black overflow-y-auto">
+          <div class="flex justify-center flex-shrink-0 px-4">
             <img
-              class="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/workflow-logo-indigo-300-mark-white-text.svg"
+              class="h-16 w-auto"
+              src="@/assets/PolardotLogo.png"
               alt="Workflow"
             />
           </div>
@@ -237,7 +237,7 @@
               <!-- Current: "bg-indigo-800 text-white", Default: "text-indigo-100 hover:bg-indigo-600" -->
               <a
                 href="#"
-                class="bg-indigo-800 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                class="bg-polar-red text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md"
               >
                 <!-- Heroicon name: outline/home -->
                 <svg
@@ -260,7 +260,7 @@
 
               <a
                 href="#"
-                class="text-indigo-100 hover:bg-indigo-600 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                class="text-indigo-100 hover:bg-polar-red group flex items-center px-2 py-2 text-sm font-medium rounded-md"
               >
                 <!-- Heroicon name: outline/users -->
                 <svg
@@ -283,7 +283,7 @@
 
               <a
                 href="#"
-                class="text-indigo-100 hover:bg-indigo-600 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                class="text-indigo-100 hover:bg-polar-red group flex items-center px-2 py-2 text-sm font-medium rounded-md"
               >
                 <!-- Heroicon name: outline/folder -->
                 <svg
@@ -306,7 +306,7 @@
 
               <a
                 href="#"
-                class="text-indigo-100 hover:bg-indigo-600 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                class="text-indigo-100 hover:bg-polar-red group flex items-center px-2 py-2 text-sm font-medium rounded-md"
               >
                 <!-- Heroicon name: outline/calendar -->
                 <svg
@@ -329,7 +329,7 @@
 
               <a
                 href="#"
-                class="text-indigo-100 hover:bg-indigo-600 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                class="text-indigo-100 hover:bg-polar-red group flex items-center px-2 py-2 text-sm font-medium rounded-md"
               >
                 <!-- Heroicon name: outline/inbox -->
                 <svg
@@ -352,7 +352,7 @@
 
               <a
                 href="#"
-                class="text-indigo-100 hover:bg-indigo-600 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                class="text-indigo-100 hover:bg-polar-red group flex items-center px-2 py-2 text-sm font-medium rounded-md"
               >
                 <!-- Heroicon name: outline/chart-bar -->
                 <svg

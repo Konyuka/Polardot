@@ -14,7 +14,7 @@
           alt="Workflow"
         />
         <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
-          Sign up for an account
+          Register for an account
         </h2>
       </div>
 
@@ -57,7 +57,7 @@
             </div>
           </div>
 
-          <div class="flex items-center justify-between">
+          <div class="flex items-center justify-between my-4">
             <div class="flex items-center">
               <input
                 id="remember-me"
@@ -95,36 +95,34 @@
   </div>
 </template>
 
-<script>
-  import MainMenu from "@/components/MainMenu.vue";
+<script setup>
+  import { ref } from "vue";
   import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+  import MainMenu from "@/components/MainMenu.vue";
+  import { useRouter } from "vue-router";
 
-  export default {
-    name: "RegisterPage",
-    props: {},
-    components: {
-      MainMenu,
-    },
-    methods: {
-      signUp() {
-        const auth = getAuth();
-        createUserWithEmailAndPassword(auth, this.email, this.password)
-          .then((userCredential) => {
-            // Signed in
-            const user = userCredential.user;
-            console.log(user);
-            // ...
-          })
-          .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(errorCode, errorMessage);
-            // ..
-          });
-      },
-    },
-  };
+  const router = useRouter();
+
+  const email = ref("");
+  const password = ref("");
+
+  function signUp() {
+    const auth = getAuth();
+    createUserWithEmailAndPassword(auth, email.value, password.value)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        console.log(user);
+        router.push("/clientdash");
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+        // ..
+      });
+  }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped></style>

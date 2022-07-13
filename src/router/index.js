@@ -4,18 +4,18 @@ import { createWebHistory, createRouter } from "vue-router";
 const routes = [
     {
         path: "/",
-        name: "Landing",
-        component: () => import('@/views/Landing.vue')
+        name: "LandingPage",
+        component: () => import('@/views/LandingPage.vue')
     },
     {
         path: "/login",
-        name: "Login",
-        component: () => import('@/views/Login.vue')
+        name: "LoginPage",
+        component: () => import('@/views/LoginPage.vue')
     },
     {
         path: "/register",
-        name: "Register",
-        component: () => import('@/views/Register.vue')
+        name: "RegisterPage",
+        component: () => import('@/views/RegisterPage.vue')
     },
     {
         path: "/clientdash",

@@ -1,5 +1,6 @@
 
 import { createWebHistory, createRouter } from "vue-router";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const routes = [
     {
@@ -20,7 +21,8 @@ const routes = [
     {
         path: "/clientdash",
         name: "ClientDash",
-        component: () => import('@/views/ClientDash.vue')
+        component: () => import('@/views/ClientDash.vue'),
+        meta: { requiresAuth: true },
     },
 ];
 
@@ -29,5 +31,24 @@ const router = createRouter({
     mode: 'history',
     routes,
 });
+
+
+router.beforeEach((to, from, next) =>
+{
+
+    const requiresAuth = to.matched.some(x => x.meta.requiresAuth)
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) =>
+    {
+        if (requiresAuth && !user) {
+            next('/login')
+        } else if (requiresAuth && user) {
+            next()
+        } else {
+            next()
+        }
+    });
+
+})
 
 export default router;

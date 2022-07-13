@@ -518,6 +518,7 @@
 
                   <a
                     href="#"
+                    @click.prevent="logOut"
                     class="block px-4 py-2 text-sm text-gray-700"
                     role="menuitem"
                     tabindex="-1"
@@ -541,8 +542,24 @@
 </template>
 
 <script setup>
+  import { getAuth, signOut } from "firebase/auth";
   import { ref } from "vue";
+  import { useRouter } from "vue-router";
+
+  const router = useRouter();
   const userSettings = ref(false);
+
+  function logOut() {
+    const auth = getAuth();
+    signOut(auth)
+      .then(() => {
+        router.push("/");
+      })
+      .catch((error) => {
+        console.log(error);
+        // An error happened.
+      });
+  }
 </script>
 
 <style scoped></style>

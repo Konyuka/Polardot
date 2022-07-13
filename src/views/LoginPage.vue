@@ -107,7 +107,7 @@
 
   const signIn = () => {
     const auth = getAuth();
-    alert(email, password);
+    // alert(email, password);
     signInWithEmailAndPassword(auth, email.value, password.value)
       .then((userCredential) => {
         // Signed in

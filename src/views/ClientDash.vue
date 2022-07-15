@@ -46,6 +46,7 @@
                 <span class="text-base font-medium text-gray-500">/mo</span>
               </p>
               <a
+                @click.prevent="openChoosePayment"
                 href="#"
                 class="mt-8 block w-full bg-polar-red border border-gray-800 rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-gray-900"
                 >Buy Hobby</a
@@ -480,9 +481,90 @@
       </div>
     </div>
 
-    <!-- modal start -->
+    <!-- Choose Payment Method Start -->
     <!-- This example requires Tailwind CSS v2.0+ -->
     <div
+      v-if="choosePayment"
+      class="relative z-10"
+      aria-labelledby="modal-title"
+      role="dialog"
+      aria-modal="true"
+    >
+      <!--
+    Background backdrop, show/hide based on modal state.
+
+    Entering: "ease-out duration-300"
+      From: "opacity-0"
+      To: "opacity-100"
+    Leaving: "ease-in duration-200"
+      From: "opacity-100"
+      To: "opacity-0"
+  -->
+      <div
+        class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+      ></div>
+
+      <div class="fixed z-10 inset-0 overflow-y-auto">
+        <div
+          class="flex items-end sm:items-center justify-center min-h-full p-4 text-center sm:p-0"
+        >
+          <!--
+        Modal panel, show/hide based on modal state.
+
+        Entering: "ease-out duration-300"
+          From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+          To: "opacity-100 translate-y-0 sm:scale-100"
+        Leaving: "ease-in duration-200"
+          From: "opacity-100 translate-y-0 sm:scale-100"
+          To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+      -->
+          <div
+            class="relative bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full sm:p-6"
+          >
+            <div>
+              <div
+                class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100"
+              >
+                <!-- Heroicon name: outline/check -->
+                <i class="fas fa-coins fa-2x text-polar-red"></i>
+              </div>
+              <div class="mt-3 text-center sm:mt-5">
+                <h3
+                  class="text-lg leading-6 font-medium text-gray-900"
+                  id="modal-title"
+                >
+                  Choose Payment Method
+                </h3>
+              </div>
+            </div>
+            <div
+              class="mt-5 sm:mt-6 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense"
+            >
+              <button
+                @click="paymentMethod('card')"
+                type="button"
+                class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-polar-red text-base font-medium text-white hover:bg-polar-gray focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-polar-gray sm:col-start-2 sm:text-sm"
+              >
+                Pay with Card
+              </button>
+              <button
+                @click="paymentMethod('mpesa')"
+                type="button"
+                class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-polar-red text-base font-medium text-white hover:bg-polar-gray focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-polar-gray sm:mt-0 sm:col-start-1 sm:text-sm"
+              >
+                Pay with Mpesa
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Choose Payment Method End -->
+
+    <!--Stripe modal start -->
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <div
+      v-if="paymentMethodValue == 'card'"
       class="relative z-10"
       aria-labelledby="modal-title"
       role="dialog"
@@ -585,8 +667,7 @@
         </div>
       </div>
     </div>
-
-    <!-- modal end -->
+    <!--Stripe  modal end -->
   </DashLayout>
 </template>
 
@@ -595,19 +676,6 @@
   import { loadStripe } from "@stripe/stripe-js";
   import { ref, onBeforeMount } from "vue";
   import { StripeElements, StripeElement } from "vue-stripe-js";
-
-  // components: {
-  //   StripeElements,
-  //   StripeElement,
-  // },
-
-  // onBeforeMount(() => {
-  //     const stripeLoaded = ref(false);
-  //     const stripePromise = loadStripe("your_key");
-  //     stripePromise.then(() => {
-  //       stripeLoaded.value = true;
-  //     });
-  // });
 
   const stripeKey = ref("pk_test_wRtooaqqYLA8Wlf3BFOksesO00z1idkYdN"); // test key
   const instanceOptions = ref({
@@ -622,9 +690,23 @@
       postalCode: "12345",
     },
   });
+
   const stripeLoaded = ref(false);
   const card = ref();
   const elms = ref();
+  const paymentMethodValue = ref("");
+  const choosePayment = ref(false);
+
+  function openChoosePayment() {
+    choosePayment.value = true;
+  }
+
+  function paymentMethod(value) {
+    // alert(value);
+    choosePayment.value = false;
+    paymentMethodValue.value = value;
+    choosePayment.value = false;
+  }
 
   function pay() {
     // console.log(card.value);
